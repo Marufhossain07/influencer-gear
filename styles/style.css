@@ -47,15 +47,17 @@ header {
 }
 
 .banner-container {
-    background-image: url(../images/Circle\ design.svg);
-    background-repeat: no-repeat;
-    background-position: right;
-    height: 475px;
     display: flex;
     justify-content: space-between;
     margin: 70px 120px;
     align-items: center;
-    /* padding: 0 120px; */
+}
+
+.circle {
+    position: absolute;
+    z-index: -1;
+    bottom: 305px;
+    right: 300px;
 }
 
 .banner-content h3 {
@@ -90,7 +92,8 @@ header {
 
 /* main styles */
 .sponsor-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
     justify-content: space-evenly;
     border-top: 1px solid gray;
     border-bottom: 1px solid gray;
@@ -254,6 +257,94 @@ footer p {
     line-height: 24px;
     padding-top: 3px;
 }
+
 footer img {
     padding: 17px 15px;
+}
+
+@media screen and (max-width: 576px) {
+
+    .nav-container,
+    .nav-container ul {
+        flex-direction: column;
+    }
+
+    .banner-container,
+    .feature {
+        flex-direction: column-reverse;
+    }
+
+    .nav-title {
+        width: 160px;
+    }
+
+    header {
+        width: 360px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .banner-container {
+        margin: 5px 5px;
+        background-size: 257px 257px;
+
+    }
+
+    .banner-content h3 {
+        font-size: 28px;
+        width: 90%;
+        
+    }
+
+    .banner-content p {
+        width: 90%;
+    }
+
+    .items-container {
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0;
+    }
+
+    .feature,
+    .btn2 {
+        margin: 0;
+    }
+
+    .feature-content {
+        padding: 0;
+    }
+
+    .feature-content p {
+        width: 90%;
+    }
+
+    .sponsor-container {
+        grid-template-columns: repeat(4, 1fr);
+        border: none;
+        padding: 0;
+    }
+
+    .sponsor-container img {
+        width: 33.381px;
+        height: 18.838px;
+    }
+
+    .camera {
+        width: 202px;
+        height: 190px;
+
+    }
+
+    .sponsor-container {
+        width: 90%;
+        margin: 0;
+    }
+
+    .circle {
+        width: 257px;
+        height: 257px;
+        bottom: 215px;
+        right: 80px;
+    }
+
 }
